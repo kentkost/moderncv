@@ -17,6 +17,9 @@
 *.cb2
 .*.lb
 
+#Pdfs in manual are allowed
+!manual/*.pdf
+
 ## Intermediate documents:
 *.dvi
 *.xdv
