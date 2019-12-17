@@ -191,6 +191,7 @@
 % compatibility package with older versions of moderncv
 \RequirePackageWithOptions{moderncvcompatibility}
 
+%Not necessary anymore
 %\RequirePackage{l3regex}
 
 %-------------------------------------------------------------------------------

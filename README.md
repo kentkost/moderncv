@@ -20,4 +20,8 @@ URL: https://github.com/xdanaux/moderncv
 #Differences
 The only differences between this and https://github.com/xdanaux/moderncv is that the icons are aligned to the right.
 
+Added stackoverflow icon to socialsymbols
+
+\RequirePackage{l3regex} has been removed since it is no longer necessary for reasons unknown.
+
 There is also a rating system for skills.
