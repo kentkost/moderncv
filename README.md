@@ -1,6 +1,6 @@
-#NOT THE OFFICIAL REPO
+# NOT THE OFFICIAL REPO
 
-#moderncv: a modern curriculum vitae class#
+# moderncv: a modern curriculum vitae class#
 
 **Moderncv** provides a documentclass for typesetting curricula vitae in various
 styles. Moderncv aims to be both straightforward to use and customizable,
@@ -17,7 +17,8 @@ Author: Xavier Danaux <xdanaux@gmail.com><br/>
 Licence: The LaTeX Project Public Li­cense, version 1.3c<br/>
 URL: https://github.com/xdanaux/moderncv
 
-#Differences
+# Differences
+
 The only differences between this and https://github.com/xdanaux/moderncv is that the icons are aligned to the right.
 
 Added stackoverflow icon to socialsymbols
