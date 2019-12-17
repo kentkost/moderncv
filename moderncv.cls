@@ -191,7 +191,7 @@
 % compatibility package with older versions of moderncv
 \RequirePackageWithOptions{moderncvcompatibility}
 
-\RequirePackage{l3regex}
+%\RequirePackage{l3regex}
 
 %-------------------------------------------------------------------------------
 %                class definition
@@ -257,17 +257,19 @@
 
 % adds a social link to one's personal information (optional)
 % usage: \social[<optional type>][<optional url>]{<account name>}
-% where <optional type> should be either "linkedin", "xing", "twitter", "github", "gitlab" or "skype"
+% where <optional type> should be either "linkedin", "xing", "twitter", "github", "gitlab", "skype", "stackoverflow"
 \collectionnew{socials}
 \NewDocumentCommand{\social}{O{}O{}m}{%
   \ifthenelse{\equal{#2}{}}%
     {%
-      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[#3]{www.linkedin.com/in/#3}}} {}%
+      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[#3]{www.google.com/in/#3}}} {}%
       \ifthenelse{\equal{#1}{xing}}    {\collectionadd[xing]{socials}    {\protect\httplink[#3]{www.xing.com/profile/#3}}}{}%
       \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[#3]{www.twitter.com/#3}}}     {}%
       \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[#3]{www.github.com/#3}}}      {}%
       \ifthenelse{\equal{#1}{gitlab}}  {\collectionadd[gitlab]{socials}  {\protect\httplink[#3]{www.gitlab.com/#3}}}      {}%
       \ifthenelse{\equal{#1}{skype}}   {\collectionadd[skype]{socials}   {#3}}                                            {}%
+      \ifthenelse{\equal{#1}{stackoverflow}}   {\collectionadd[stackoverflow]{socials}   {#3}}                                            {}%
+      \ifthenelse{\equal{#1}{custom}}   {\collectionadd[custom]{socials}   {#3}}                                            {}%
     }
     {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
 
@@ -299,6 +301,8 @@
 % other symbols
 \newcommand*{\listitemsymbol}      {\labelitemi~}
 \newcommand*{\addresssymbol}       {}
+\newcommand*{\mapsymbol}           {}
+\newcommand*{\flagsymbol}          {}
 \newcommand*{\mobilephonesymbol}   {}
 \newcommand*{\fixedphonesymbol}    {}
 \newcommand*{\faxphonesymbol}      {}
@@ -310,6 +314,7 @@
 \newcommand*{\githubsocialsymbol}  {}
 \newcommand*{\gitlabsocialsymbol}  {}
 \newcommand*{\skypesocialsymbol}   {}
+\newcommand*{\stackoverflowsocialsymbol}   {}
 
 % other
 %------
