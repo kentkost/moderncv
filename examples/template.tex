@@ -7,10 +7,38 @@
 
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{graphicx,xcolor,fontawesome}
+\usepackage{multicol}
+\definecolor{frontColor}{rgb}{0.22,0.45,0.70}% light blue
+\definecolor{backColor}{RGB}{200,200,200}% grey
+\definecolor{myblue}{RGB}{200,200,200}
 
-% moderncv themes
-\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage{tikz}
+
+%Possible to change color
+\newcommand{\grade}[1]{%
+    \begin{tikzpicture}
+    \clip (1em-.4em,-.35em) rectangle (5em +.5em ,1em);
+    \foreach \x in {1,2,...,5}{
+        \path[{fill=backColor}] (\x em,0) circle (.35em);
+    }
+    \begin{scope}
+    \clip (1em-.4em,-.35em) rectangle (#1em +.5em ,1em);
+    \foreach \x in {1,2,...,5}{
+        \path[{fill=blue}] (\x em,0) circle (.35em);
+    }
+    \end{scope}
+
+    \end{tikzpicture}%
+}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -92,6 +120,70 @@ Detailed achievements:%
 \subsection{Miscellaneous}
 \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\clearpage
+\vspace{10mm}
+\begin{multicols}{2}
+\section{Programming languages}
+
+\cvitemwithcomment{C\#}              {\grade{5}}{}\vspace{-2mm}
+\cvitemwithcomment{C/C++/Qt}         {\grade{4}}{}\vspace{-2mm}
+\cvitemwithcomment{Java}             {\grade{4}}{}\vspace{-2mm}
+\cvitemwithcomment{Python}           {\grade{4}}{}\vspace{-2mm}
+\cvitemwithcomment{SQL}              {\grade{4}}{}\vspace{-2mm}
+\cvitemwithcomment{ASP.NET}          {\grade{3.5}}{}\vspace{-2mm}
+%\vspace{10mm}
+\cvitemwithcomment{Groovy}           {\grade{3}}{}\vspace{-2mm}
+\cvitemwithcomment{Javascript}       {\grade{3}}{}\vspace{-2mm}
+\cvitemwithcomment{Shell}            {\grade{2}}{}\vspace{-2mm}
+\cvitemwithcomment{Assembly}         {\grade{1.5}}{}\vspace{-2mm}
+
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\renewcommand{\listitemsymbol}{} % Changes the symbol used for lists
+\section{MarkUp and Data formats}
+\cvlistitem{\LaTeX}
+\cvlistitem{HTML}
+\cvlistitem{XML}
+\cvlistitem{JSON}
+\vspace{10mm}
+\vspace{10mm}
+\vspace{10mm}
+
+\section{Databases}
+\cvitemwithcomment{\hspace{-5mm}SQLite}               {\grade{5}}{}\vspace{-2mm}
+\cvitemwithcomment{\hspace{-5mm}PostgreSQL}           {\grade{3}}{}\vspace{-2mm}
+\cvitemwithcomment{\hspace{-5mm}MongoDB}              {\grade{2}}{}\vspace{-2mm}
+
+\section{Tools}
+\cvlistitem{Docker}
+\cvlistitem{Conan}
+\cvlistitem{Artifactory}
+\cvlistitem{Cmake}
+\cvlistitem{Jenkins}
+\cvlistitem{SVN}
+\cvlistitem{git}
+\cvlistitem{Fiddler4}
+\cvlistitem{Selenium}
+\cvlistitem{gdb}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Dansk}{Mothertongue}{}
+\cvitemwithcomment{Engelsk}{Fluent}{}
+\cvitemwithcomment{Tysk}{Adequate}{}
+\cvitemwithcomment{Fransk}{Tourist}{}
+%\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+\end{multicols}
+
 \section{Languages}
 \cvitemwithcomment{Language 1}{Skill level}{Comment}
 \cvitemwithcomment{Language 2}{Skill level}{Comment}
@@ -127,9 +219,9 @@ Detailed achievements:%
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
