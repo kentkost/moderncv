@@ -1,3 +1,5 @@
+#NOT THE OFFICIAL REPO
+
 #moderncv: a modern curriculum vitae class#
 
 **Moderncv** provides a documentclass for typesetting curricula vitae in various
@@ -14,3 +16,8 @@ directory for some examples. Documents can be compiled into dvi, ps or pdf.
 Author: Xavier Danaux <xdanaux@gmail.com><br/>
 Licence: The LaTeX Project Public Li­cense, version 1.3c<br/>
 URL: https://github.com/xdanaux/moderncv
+
+#Differences
+The only differences between this and https://github.com/xdanaux/moderncv is that the icons are aligned to the right.
+
+There is also a rating system for skills.
