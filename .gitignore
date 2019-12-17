@@ -18,7 +18,7 @@
 .*.lb
 
 #Pdfs in manual are allowed
-!manual/*.pdf
+!*fontawesome.pdf
 
 ## Intermediate documents:
 *.dvi
